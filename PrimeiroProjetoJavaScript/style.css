@@ -1,0 +1,37 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    
+    
+}
+header,main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    font-size: 30px;
+}
+
+button{
+    width: 80px;
+}
+
+section{
+    background-color: rgb(163, 240, 173);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#lamp{
+    width: 100px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     body{
+        background-color: rgb(113, 204, 235);
+        color: white;
+        font: normal 18pt Arial;
+     }
+
+    </style>
+    <title>Introdução a Dom</title>
+</head>
+<body>
+    <h1>Iniciando Estudos com <strong>DOM</strong> em javaScript </h1>
+    <p>Aqui vai o resultado:</p>
+    <p>Paulo:</p>
+    <p>Fernanda:</p>
+    <div id="mensagem">Click</div>
+    <div id="getSelector">Usando Seletor</div>
+
+    <script>
+
+        //Selecionando todas as tags com (p) 
+        //A variavel p1 = recepe o texto dque está escrito no primeiro paragrafo
+        // var p1 = window.document.getElementsByName('p')[0] --- [0] primeiro paragrafo, [1]segundo paragrafo ...
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+
+        //Mudando a cor do paragrado selecionado
+        p1.style.color = 'green'
+
+
+        /*Mudando a cor de fundo com variavel cor recebe a janela do
+        navegador, com o documento html a parte do body
+        
+        A variavel cor recebe a janela do navegador na parte do documento e
+        acessa o corpo
+        */
+        var cor = window.document.body
+        cor.style.background = 'pink'
+
+
+
+        //Escrevendo o que está escrito no p[0]
+        window.document.write("Está escrito: "+p1.innerText)
+
+
+        //Selecionando tag por ID="mensagem" e escrevendo o texto escrito nela
+        let m = window.document.getElementById('mensagem')
+        window.document.write("O ID selecionado tem o seguinte texto: "+m.innerHTML)
+        //Mudando a cor de Backgroun do texto com ID
+        m.style.background = 'blue'
+        // Mudando o texto do ID selecionado
+        m.innerText = "Estudando"
+
+
+        //selecionando por seletor a minha div com a ID
+        // . Para classe   e   # para ID
+        var selector = window.document.querySelector('div#getSelector')
+        selector.style.background = 'purple'
+
+    </script>
+</body>
+</html>
